@@ -1,0 +1,7 @@
+{
+  "name": "kriky-machine-server",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  }
+}
