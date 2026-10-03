@@ -1,0 +1,185 @@
+{
+  "_readme": [
+    "Add a game here and it appears in the ONLINE app on the machine.",
+    "No upload to the handheld is needed.",
+    "",
+    "id      short name used in the URL",
+    "title   shown in the game list",
+    "scenes  the first scene is where a game starts",
+    "        text    lines, wrapped to 16 characters by the server",
+    "        options 'to' is the id of the scene to jump to",
+    "        a scene with no options is an ending",
+    "",
+    "The screen fits three wrapped lines plus two choices, so keep each text",
+    "line under about 40 characters and options under 14, and a scene shows",
+    "on one screen with no extra tap. Longer text still works, the machine",
+    "falls back to a scrollable page.",
+    "Keep one game under about 5000 characters."
+  ],
+  "games": [
+    {
+      "id": "tunnel",
+      "title": "TUNNEL",
+      "scenes": [
+        {
+          "id": "0",
+          "title": "ENTRANCE",
+          "text": ["Dark tunnel. Something glitters."],
+          "options": [
+            { "to": "1", "text": "Follow it" },
+            { "to": "2", "text": "Feel wall" }
+          ]
+        },
+        {
+          "id": "1",
+          "title": "THE GLITTER",
+          "text": ["A dropped coin. Water ahead."],
+          "options": [
+            { "to": "3", "text": "Wade in" },
+            { "to": "4", "text": "Take coin" }
+          ]
+        },
+        {
+          "id": "2",
+          "title": "COLD WALL",
+          "text": ["Wet stone. There is a hole."],
+          "options": [
+            { "to": "3", "text": "Go through" },
+            { "to": "1", "text": "Follow it" }
+          ]
+        },
+        {
+          "id": "3",
+          "title": "UNDERGROUND",
+          "text": ["A hall of pipes. It hums."],
+          "options": [
+            { "to": "5", "text": "Find the hum" },
+            { "to": "4", "text": "Run back" }
+          ]
+        },
+        {
+          "id": "4",
+          "title": "DAYLIGHT",
+          "text": ["You climb out, safe. Score 3."],
+          "options": []
+        },
+        {
+          "id": "5",
+          "title": "THE MACHINE",
+          "text": ["A pump, drying the tunnel."],
+          "options": [
+            { "to": "4", "text": "Go home" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pig",
+      "title": "SPACE PIG",
+      "scenes": [
+        {
+          "id": "0",
+          "title": "LAUNCH",
+          "text": ["Your pig is strapped in. Go."],
+          "options": [
+            { "to": "1", "text": "Press it" },
+            { "to": "2", "text": "Wait" }
+          ]
+        },
+        {
+          "id": "1",
+          "title": "ORBIT",
+          "text": ["Everything hums. Hatch cracked."],
+          "options": [
+            { "to": "3", "text": "Patch it" },
+            { "to": "4", "text": "Look out" }
+          ]
+        },
+        {
+          "id": "2",
+          "title": "DELAY",
+          "text": ["Ground is not happy. Crack!"],
+          "options": [
+            { "to": "3", "text": "Patch it" },
+            { "to": "4", "text": "Look out" }
+          ]
+        },
+        {
+          "id": "3",
+          "title": "PATCHED",
+          "text": ["It holds. Hero pig indeed."],
+          "options": [
+            { "to": "5", "text": "Land" }
+          ]
+        },
+        {
+          "id": "4",
+          "title": "VIEW",
+          "text": ["Lovely. The hatch gives way."],
+          "options": [
+            { "to": "3", "text": "Patch it" }
+          ]
+        },
+        {
+          "id": "5",
+          "title": "HOME",
+          "text": ["A field. An apple for pig."],
+          "options": []
+        }
+      ]
+    },
+    {
+      "id": "shop",
+      "title": "CLOSED SHOP",
+      "scenes": [
+        {
+          "id": "0",
+          "title": "MIDNIGHT",
+          "text": ["Shut shop, open door. A robot."],
+          "options": [
+            { "to": "1", "text": "Pay 5" },
+            { "to": "2", "text": "Ask why" }
+          ]
+        },
+        {
+          "id": "1",
+          "title": "PAID",
+          "text": ["It gives you a brass key."],
+          "options": [
+            { "to": "3", "text": "Ask the key" },
+            { "to": "4", "text": "Leave" }
+          ]
+        },
+        {
+          "id": "2",
+          "title": "THE ROBOT",
+          "text": ["A thing you own, it says."],
+          "options": [
+            { "to": "1", "text": "Pay 5" },
+            { "to": "4", "text": "Leave" }
+          ]
+        },
+        {
+          "id": "3",
+          "title": "THE KEY",
+          "text": ["It opens the back cupboard."],
+          "options": [
+            { "to": "5", "text": "Look inside" }
+          ]
+        },
+        {
+          "id": "4",
+          "title": "OUTSIDE",
+          "text": ["You go home with nothing."],
+          "options": []
+        },
+        {
+          "id": "5",
+          "title": "FOUND",
+          "text": ["A sock you lost. Score 5."],
+          "options": []
+        }
+      ]
+    }
+  ]
+}

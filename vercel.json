@@ -2,7 +2,9 @@
   "version": 2,
   "rewrites": [
     { "source": "/ask", "destination": "/api/ask" },
-    { "source": "/ping", "destination": "/api/ping" }
+    { "source": "/ping", "destination": "/api/ping" },
+    { "source": "/games", "destination": "/api/games" },
+    { "source": "/game", "destination": "/api/games" }
   ],
   "headers": [
     {
